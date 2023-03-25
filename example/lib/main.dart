@@ -9,7 +9,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   AzureNotificationhubsFlutter _anh;
 
   @override
@@ -22,8 +21,8 @@ class _MyAppState extends State<MyApp> {
           context: context,
           builder: (context) => AlertDialog(
             content: ListTile(
-            title: Text(notification['data']['title']),
-            subtitle: Text(notification['data']['body']),
+              title: Text(notification['data']['title']),
+              subtitle: Text(notification['data']['body']),
             ),
             actions: <Widget>[
               FlatButton(
@@ -54,9 +53,12 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Azure notification hubs example app'),
         ),
         body: Center(
-          child: Text('https://github.com/rswiftoffice/azure-notificationhubs-flutter/ & https://github.com/19hours'),
+          child: Text(
+              'https://github.com/rswiftoffice/azure-notificationhubs-flutter/ & https://github.com/19hours'),
         ),
       ),
     );
   }
+
+  FlatButton({Text child, void Function() onPressed}) {}
 }
